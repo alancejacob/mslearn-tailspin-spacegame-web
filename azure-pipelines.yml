@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+# ASP.NET Core
+# Build and test ASP.NET Core projects targeting .NET Core.
+# Add steps that run tests, create a NuGet package, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+>>>>>>> 103a1aff922047ffdfb888347ff94f8937eb41a1
 trigger:
 - '*'
 
@@ -46,6 +54,7 @@ steps:
     projects: '**/*.csproj'
 
 - task: DotNetCoreCLI@2
+<<<<<<< HEAD
   displayName: 'Install ReportGenerator'
   inputs:
     command: custom
@@ -71,6 +80,8 @@ steps:
     summaryFileLocation: '$(Build.SourcesDirectory)/**/coverage.cobertura.xml'
 
 - task: DotNetCoreCLI@2
+=======
+>>>>>>> 103a1aff922047ffdfb888347ff94f8937eb41a1
   displayName: 'Publish the project - $(buildConfiguration)'
   inputs:
     command: 'publish'
@@ -81,4 +92,8 @@ steps:
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
+<<<<<<< HEAD
   condition: succeeded()
+=======
+  condition: succeeded()
+>>>>>>> 103a1aff922047ffdfb888347ff94f8937eb41a1
